@@ -23,6 +23,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(little-digital-diary
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        diary.h diary.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET little-digital-diary APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -19,13 +19,16 @@ int main(int argc, char *argv[])
     QVBoxLayout *vLayout = new QVBoxLayout;
     QHBoxLayout *hLayout = new QHBoxLayout;
     QLabel *label = new QLabel("Enter..");
+    // TODO make it so line edit can expand vertically if user writes a lot
     QLineEdit *input = new QLineEdit;
     QPushButton *button =  new QPushButton("submit");
 
     // vertical layout
+    // TODO add hbox here
+    hLayout->addWidget(input);
+    hLayout->addWidget(button);
+    vLayout->addLayout(hLayout);
     vLayout->addWidget(label);
-    vLayout->addWidget(input);
-    vLayout->addWidget(button);
 
     // set up main window
     centralWidget->setLayout(vLayout);
